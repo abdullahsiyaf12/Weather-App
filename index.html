@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weatherly</title>
+  <link rel="icon" type="image/x-icon" href="icon/weather icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo"><img src="icon/weather icon.svg" alt="humanity" class="img">Weatherly</div>
+    
+    <div class="search-container">
+      <span class="search-icon"><img src="icon/search icon.svg" alt="humanity" class="search-icon"></span>
+      <input type="text" class="search-input" placeholder="City search..." id="citySearch">
+    </div>
+
+    <div class="header-right">
+      <img src="icon/thermometer.svg" alt="humanity" class="img">
+      <span style="font-size:1rem; font-weight:500;"><span class="city"></span> <span class="country"></span></span>
+    </div>
+  </div>
+  <h1>Search city</h1>
+<div class="loading"></div>
+  <div class="main-container">
+    <!-- CURRENT WEATHER CARD -->
+    <div class="weather-card dis-show">
+      <div class="current-top">
+        <div class="city-date">
+          <div class="city-name"><span class="city"></span> <span class="country"></span></div>
+          <div class="date-time"></div>
+        </div>
+        <div style="text-align:right">
+          <div class="big-condition">Description</div>
+        </div>
+      </div>
+
+      <div class="current-main">
+        <div class="big-icon"><img class="weather_icon"></div>
+        <div>
+          <div class="big-temp">00°C</div>
+        </div>
+      </div>
+
+      <!-- ALL WEATHER DETAILS -->
+      <div class="details-grid">
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/humanity.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Humidity</h4>
+            <p class="humidity"></p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/wind speed.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Wind Speed</h4>
+            <p class="w_speed"><span style="font-size:0.9rem"></span></p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/pressure.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Pressure</h4>
+            <p class="pressure"></p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/visibility.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Visibility</h4>
+            <p class="visibility"></p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/sunrise.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Sunrise</h4>
+            <p class="sunrise"></p>
+          </div>
+        </div>
+        <div class="detail-item">
+          <div class="detail-icon"><img src="icon/sunrise.svg" alt="humanity" class="img"></div>
+          <div class="detail-info">
+            <h4>Sunset</h4>
+            <p class="sunset"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOURLY FORECAST -->
+    <div class="section-title dis-show">Hourly Forecast</div>
+    <div class="hourly dis-show">
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+      <div class="hour-card"><div style="font-size:0.9rem"><span class="hours"></span></div><div style="font-size:42px;margin:12px 0"><img alt="Weather icon" class="img hourly-w-icon"></div><div><span class="temp"></span></div></div>
+    </div>
+
+    <!-- 7-DAY FORECAST -->
+    <div class="section-title dis-show">7-Day Forecast</div>
+    <div class="week dis-show">
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+      <div class="day">
+        <div class="day-name"></div>
+        <div class="day-icon"> <img alt="weather icon" class="img dailyIcon"> </div>
+        <div class="day-temp"><span class="max-temp"></span><span class="min-temp" ></span></div>
+        <div style="margin-top:8px;font-size:0.85rem;opacity:0.85"><span class="dly-discription">Description</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Weatherly. All rights reserved.
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
