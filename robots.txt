@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdullahsiyaf12.github.io/Weather-App/sitemap.xml
